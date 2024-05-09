@@ -64,10 +64,6 @@ body {
   margin-top: 20rem;
 }
 
-#home{
-  display: none;
-}
-
 /* destination page */
 #destination{
   background: url("./assets/destination/background-destination-desktop.jpg");
@@ -152,4 +148,88 @@ body {
     }
   }
 
+}
+
+
+/* Crew page setup  */
+#home, #destination{
+  display: none;
+}
+
+#crew{
+  background: url("./assets/crew/background-crew-desktop.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items:end;
+}
+#crewright{
+  width: 30%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
+  img{
+    height: 80%;
+    object-fit: cover;
+  }
+}
+
+#crewleft{
+  height: 90%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: flex-start;
+  padding: 20px;
+  h1{
+    text-transform: uppercase;
+    font-size: 3rem;
+    /* margin-bottom: 50px; */
+  }
+}
+
+#circle-navigation{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.circle{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #444343;
+  margin-top: 20px;
+}
+
+.circle:hover , .circleactive{
+  background: #ffffff;
+}
+
+#crewcontent{
+  h4{
+    font-size: 2.7rem;
+    margin-bottom: 10px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #8d8d8d;
+  }
+  p{
+    font-size: 1.5rem;
+    width: 80%;
+    margin-top: 20px;
+    font-weight: 300;
+  }
+  h2{
+    font-size: 4.5rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
 }
