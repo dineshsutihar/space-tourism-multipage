@@ -1,3 +1,9 @@
+/* Importing font form assets/font folder */
+@font-face {
+  font-family: "majesty-display";
+  src: url("./assets/font/majesty-display.otf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,12 +11,146 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  background: url("./assets/home/background-home-desktop.jpg");
-  width: 100%;
-  height: 95vh;
-  background-size:cover;
-  background-repeat: no-repeat;
+  font-family: "majesty-display", sans-serif;
 }
 
+#home{
+  background: url("./assets/home/background-home-desktop.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #ffffff;
+}
+#home #leftMain{
+  width: 500px;
+  margin-top: 100px;
+  margin-left: 50px;
+  text-align: justify;
+  h1{
+    text-transform: uppercase;
+  }
+  p{
+    font-size: 1.5rem;
+    margin-top: 20px;
+    font-weight: 300;
+  }
+}
 
+#home #leftMain span{
+  width: 100%;
+  font-size:10rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+#home a{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #ffffff;
+  padding: 20px;
+  color: #000000;
+  font-size: 2.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rem;
+}
+
+#home{
+  display: none;
+}
+
+/* destination page */
+#destination{
+  background: url("./assets/destination/background-destination-desktop.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  min-height: 100dvh;
+  width: 100dvw;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap:nowrap;
+}
+
+#leftDestination{
+  width: 50%;
+  margin-top: 100px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1{
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-bottom: 50px;
+  }
+}
+
+#rightDestination{
+  width: 50%;
+
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items:flex-start;
+  flex-direction: column;
+  padding: 20px;
+  padding-left: 10%;
+  padding-right: 15%;
+  margin-right: 50px;
+  margin-top: 10rem;
+
+  #desticontent{
+    font-size: 1.5rem;
+    margin: 20px 0;
+    font-weight: 300;
+  }
+
+  hr{
+    width: 100%;
+    margin: 20px 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.361);
+    border: none;
+    position: relative;
+  }
+  h1{
+    text-transform: uppercase;
+    font-size: 6rem;
+  }
+ 
+  #planetDetails{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    div{
+      width: 50%;
+    }
+
+    h4{
+      font-size: 1.7rem;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+    p{
+      font-size: 1rem;
+      text-transform: uppercase;
+      
+    }
+  }
+
+}
