@@ -98,7 +98,6 @@ body {
 
 #rightDestination{
   width: 50%;
-
   height: max-content;
   display: flex;
   justify-content: center;
@@ -106,7 +105,7 @@ body {
   flex-direction: column;
   padding: 20px;
   padding-left: 10%;
-  padding-right: 15%;
+  padding-right: 10%;
   margin-right: 50px;
   margin-top: 10rem;
 
