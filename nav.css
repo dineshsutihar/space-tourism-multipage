@@ -66,12 +66,11 @@ nav ul li a span {
 
 header > hr {
   margin-left: 12rem;
-  width: 37% !important;
+  width: 33% !important;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.361);
   border: none;
   position: absolute;
-  z-index: 1000;
 }
 
 /* Destination  */
