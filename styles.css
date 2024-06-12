@@ -241,12 +241,46 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color:#ffffff;
+  padding-top: 10%;
+  padding-left: 10%;
 
+}
+.tech-content{
+  display: flex; 
+  align-items:center;
+  justify-content:space-between;
+  /* border: 2px solid orange; */
+  height: 95%;
+  gap: 5%;
+  img{
+    width: max-content;
+    height: 100%;
+  }
+}
 
+.content-main{
+  /* border: 2px solid red; */
+  width: 600px;
+  display: flex;
+  gap: 10%;
+  align-items: center;
+  justify-content: center;
+
+}
+#content{
+  h1{
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    margin: 10px 0 20px 0;
+  }
+  p{
+    line-height: 1.7;
+  }
 }
 .main-subheader{
   text-transform: uppercase;
   font-weight: 400;
+  font-size: 1.7rem;
   
   span{
     color: #444343;
@@ -256,6 +290,7 @@ body {
 .sub-upper{
   text-transform: uppercase;
 }
+
 .circle{
   width: 60px;
   height: 60px;
@@ -263,7 +298,7 @@ body {
   border: 1px solid #8d8d8d;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   background: transparent;
 }
 .circle:hover{
@@ -273,5 +308,5 @@ body {
 
 
 #home, #destination, #crew{
-  display: none;
+  /* display: none; */
 }
