@@ -19,7 +19,7 @@ body {
   background-size:cover;
   background-repeat: no-repeat;
   height: 100dvh;
-  width: 100dvw;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -70,7 +70,7 @@ body {
   background-size:cover;
   background-repeat: no-repeat;
   min-height: 100dvh;
-  width: 100dvw;
+  width: 100%;
   color: #ffffff;
   display: flex;
   justify-content: space-around;
@@ -152,15 +152,13 @@ body {
 
 
 /* Crew page setup  */
-#home, #destination{
-  display: none;
-}
+
 
 #crew{
   background: url("./assets/crew/background-crew-desktop.jpg");
   background-size:cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 100dvh;
   width: 100%;
   color: #ffffff;
   display: flex;
@@ -168,13 +166,15 @@ body {
   align-items:end;
 }
 #crewright{
-  width: 30%;
+  width: 40%;
   height: 90%;
   display: flex;
   flex-direction: column;
   justify-content:flex-end;
   img{
     height: 80%;
+    width: -moz-fit-content;
+    width: fit-content;
     object-fit: cover;
   }
 }
@@ -232,4 +232,46 @@ body {
     font-weight: 300;
     text-transform: uppercase;
   }
+}
+
+/* Technology Section */
+#technology{
+  height: 100vh;
+  background: url("./assets/technology/background-technology-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:#ffffff;
+
+
+}
+.main-subheader{
+  text-transform: uppercase;
+  font-weight: 400;
+  
+  span{
+    color: #444343;
+    margin-right: 10px;
+  }
+}
+.sub-upper{
+  text-transform: uppercase;
+}
+.circle{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #8d8d8d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+.circle:hover{
+  background:#ffffff;
+  color:#000000;
+}
+
+
+#home, #destination, #crew{
+  display: none;
 }
