@@ -9,14 +9,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
 
 body {
   font-family: "majesty-display", sans-serif;
 }
 
-#home{
+#home {
   background: url("./assets/home/background-home-desktop.jpg");
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
   height: 100dvh;
   width: 100%;
@@ -25,30 +32,30 @@ body {
   align-items: center;
   color: #ffffff;
 }
-#home #leftMain{
+#home #leftMain {
   width: 500px;
   margin-top: 100px;
   margin-left: 50px;
   text-align: justify;
-  h1{
+  h1 {
     text-transform: uppercase;
   }
-  p{
+  p {
     font-size: 1.5rem;
     margin-top: 20px;
     font-weight: 300;
   }
 }
 
-#home #leftMain span{
+#home #leftMain span {
   width: 100%;
-  font-size:10rem;
+  font-size: 10rem;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
 
-#home a{
+#home a {
   width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -65,9 +72,9 @@ body {
 }
 
 /* destination page */
-#destination{
+#destination {
   background: url("./assets/destination/background-destination-desktop.jpg");
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
   min-height: 100dvh;
   width: 100%;
@@ -75,29 +82,29 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap:nowrap;
+  flex-wrap: nowrap;
 }
 
-#leftDestination{
+#leftDestination {
   width: 50%;
   margin-top: 100px;
   margin-left: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  h1{
+  h1 {
     text-transform: uppercase;
     font-size: 3rem;
     margin-bottom: 50px;
   }
 }
 
-#rightDestination{
+#rightDestination {
   width: 50%;
   height: max-content;
   display: flex;
   justify-content: center;
-  align-items:flex-start;
+  align-items: flex-start;
   flex-direction: column;
   padding: 20px;
   padding-left: 10%;
@@ -105,13 +112,13 @@ body {
   margin-right: 50px;
   margin-top: 10rem;
 
-  #desticontent{
+  #desticontent {
     font-size: 1.5rem;
     margin: 20px 0;
     font-weight: 300;
   }
 
-  hr{
+  hr {
     width: 100%;
     margin: 20px 0;
     height: 1px;
@@ -119,12 +126,12 @@ body {
     border: none;
     position: relative;
   }
-  h1{
+  h1 {
     text-transform: uppercase;
     font-size: 6rem;
   }
- 
-  #planetDetails{
+
+  #planetDetails {
     display: flex;
     flex-direction: row;
     margin-top: 10px;
@@ -132,46 +139,42 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    div{
+    div {
       width: 50%;
     }
 
-    h4{
+    h4 {
       font-size: 1.7rem;
       text-transform: uppercase;
       margin: 10px 0;
     }
-    p{
+    p {
       font-size: 1rem;
       text-transform: uppercase;
-      
     }
   }
-
 }
-
 
 /* Crew page setup  */
 
-
-#crew{
+#crew {
   background: url("./assets/crew/background-crew-desktop.jpg");
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
   height: 100dvh;
   width: 100%;
   color: #ffffff;
   display: flex;
   justify-content: space-around;
-  align-items:end;
+  align-items: end;
 }
-#crewright{
+#crewright {
   width: 40%;
   height: 90%;
   display: flex;
   flex-direction: column;
-  justify-content:flex-end;
-  img{
+  justify-content: flex-end;
+  img {
     height: 80%;
     width: -moz-fit-content;
     width: fit-content;
@@ -179,28 +182,28 @@ body {
   }
 }
 
-#crewleft{
+#crewleft {
   height: 90%;
   width: 40%;
   display: flex;
   flex-direction: column;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: flex-start;
   padding: 20px;
-  h1{
+  h1 {
     text-transform: uppercase;
     font-size: 3rem;
     /* margin-bottom: 50px; */
   }
 }
 
-#circle-navigation{
+#circle-navigation {
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
 
-.circle{
+.circle {
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -208,25 +211,26 @@ body {
   margin-top: 20px;
 }
 
-.circle:hover , .circleactive{
+.circle:hover,
+.circleactive {
   background: #ffffff;
 }
 
-#crewcontent{
-  h4{
+#crewcontent {
+  h4 {
     font-size: 2.7rem;
     margin-bottom: 10px;
     font-weight: 300;
     text-transform: uppercase;
     color: #8d8d8d;
   }
-  p{
+  p {
     font-size: 1.5rem;
     width: 80%;
     margin-top: 20px;
     font-weight: 300;
   }
-  h2{
+  h2 {
     font-size: 4.5rem;
     margin-bottom: 30px;
     font-weight: 300;
@@ -235,63 +239,61 @@ body {
 }
 
 /* Technology Section */
-#technology{
+#technology {
   height: 100vh;
   background: url("./assets/technology/background-technology-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  color:#ffffff;
+  color: #ffffff;
   padding-top: 10%;
   padding-left: 10%;
-
 }
-.tech-content{
-  display: flex; 
-  align-items:center;
-  justify-content:space-between;
+.tech-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   /* border: 2px solid orange; */
   height: 95%;
   gap: 5%;
-  img{
+  img {
     width: max-content;
     height: 100%;
   }
 }
 
-.content-main{
+.content-main {
   /* border: 2px solid red; */
   width: 600px;
   display: flex;
   gap: 10%;
   align-items: center;
   justify-content: center;
-
 }
-#content{
-  h1{
+#content {
+  h1 {
     font-size: 3.2rem;
     text-transform: uppercase;
     margin: 10px 0 20px 0;
   }
-  p{
+  p {
     line-height: 1.7;
   }
 }
-.main-subheader{
+.main-subheader {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 1.7rem;
-  
-  span{
+
+  span {
     color: #444343;
     margin-right: 10px;
   }
 }
-.sub-upper{
+.sub-upper {
   text-transform: uppercase;
 }
 
-.circle{
+.circle {
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -301,12 +303,13 @@ body {
   justify-content: space-around;
   background: transparent;
 }
-.circle:hover{
-  background:#ffffff;
-  color:#000000;
+.circle:hover {
+  background: #ffffff;
+  color: #000000;
 }
 
-
-#home, #destination, #crew{
+#home,
+#destination,
+#crew {
   /* display: none; */
 }
