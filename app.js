@@ -5,6 +5,17 @@ console.log(data);
 const destinationImage = document.querySelector("#leftDestination img");
 const destinationHeader = document.querySelector("#destiheader");
 const destinationDescription = document.querySelector("#desticontent");
+const destiNav = document.querySelectorAll("#rightDestination>nav>ul>li");
+
+destiNav.forEach((ele) => {
+  ele.classList.toggle("navActive");
+  ele.addEventListener("click", (e) => {
+    const dest = data.destinations[ele.getAttribute("value")];
+    destinationDescription.textContent = dest.description;
+    destinationHeader.textContent = dest.name;
+    destinationImage.setAttribute("src", dest.images.png);
+  });
+});
 
 // crew
 const crewImage = document.querySelector("#crewright img");
@@ -44,7 +55,7 @@ navElement.forEach((ele) => {
 // destination section click function
 const destElem = document.querySelectorAll("#rightDestination nav ul li");
 destElem.forEach((el) => {
-  console.log((el.target.value = "Dinesh"));
+  // console.log((el.target.value = "Dinesh"));
   //   el.target.classList.contains("navActive") &&
   //     el.target.classList.remove("navActive");
   el.addEventListener("click", (event) => {
