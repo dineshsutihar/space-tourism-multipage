@@ -5,15 +5,28 @@ console.log(data);
 const destinationImage = document.querySelector("#leftDestination img");
 const destinationHeader = document.querySelector("#destiheader");
 const destinationDescription = document.querySelector("#desticontent");
+const destinationDistance = document.querySelector("#planetDetails .dis h4");
+const destinationTravel = document.querySelector("#planetDetails .trav h4");
 const destiNav = document.querySelectorAll("#rightDestination>nav>ul>li");
 
 destiNav.forEach((ele) => {
-  ele.classList.toggle("navActive");
   ele.addEventListener("click", (e) => {
-    const dest = data.destinations[ele.getAttribute("value")];
+    // Remove the 'navActive' class from all elements
+    document.querySelector(".moon").classList.remove("navActive");
+    destiNav.forEach((navItem) => navItem.classList.remove("navActive"));
+    // Add 'navActive' class to the clicked element
+    ele.classList.add("navActive");
+
+    // Get the destination data
+    const index = ele.getAttribute("value");
+    const dest = data.destinations[index];
+
+    // Update the destination details
     destinationDescription.textContent = dest.description;
     destinationHeader.textContent = dest.name;
     destinationImage.setAttribute("src", dest.images.png);
+    destinationDistance.textContent = dest.distance;
+    destinationTravel.textContent = dest.travel;
   });
 });
 
