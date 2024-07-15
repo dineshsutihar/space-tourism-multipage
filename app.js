@@ -29,17 +29,32 @@ destiNav.forEach((ele) => {
 
 // crew
 const crewImage = document.querySelector("#crewright img");
-const crewDesignation = document.querySelector("#crewContent h4");
-const crewName = document.querySelector("#crewContent h2");
-const crewDescription = document.querySelector("#crewContent p");
+const crewDesignation = document.querySelector("#crewcontent h4");
+const crewName = document.querySelector("#crewcontent h2");
+const crewDescription = document.querySelector("#crewcontent p");
+const crewNav = document.querySelectorAll("#circle-navigation>.circle");
+
+crewNav.forEach((ele, index) => {
+  ele.addEventListener("click", (e) => {
+    document.querySelector("#circle4").classList.remove("circleactive");
+    crewNav.forEach((navItem) => navItem.classList.remove("circleactive"));
+
+    ele.classList.add("circleactive");
+    const cre = data.crew[index];
+    crewDescription.textContent = cre.bio;
+    crewName.textContent = cre.name;
+    crewImage.setAttribute("src", cre.images.png);
+    crewDesignation.textContent = cre.role;
+  });
+});
 
 // Technology
 const techName = document.querySelector("#content h1");
 const techDescription = document.querySelector("#content p");
 const techImage = document.querySelector("#content img");
 
+// Main Navigation
 const mainNav = document.querySelectorAll("header>nav>ul>li");
-console.log(mainNav);
 mainNav.forEach((ele, index) => {
   ele.addEventListener("click", () => {
     document.querySelector(".home").classList.remove("navActive");
