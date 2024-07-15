@@ -51,7 +51,23 @@ crewNav.forEach((ele, index) => {
 // Technology
 const techName = document.querySelector("#content h1");
 const techDescription = document.querySelector("#content p");
-const techImage = document.querySelector("#content img");
+const techImage = document.querySelector("#technology img");
+const techNav = document.querySelectorAll(
+  "#technology>.tech-content>.content-main>.circle-main>.circle"
+);
+
+techNav.forEach((ele, index) => {
+  ele.addEventListener("click", (e) => {
+    document.querySelector(".circle-1").classList.remove("circleactive");
+    techNav.forEach((navItem) => navItem.classList.remove("circleactive"));
+
+    ele.classList.add("circleactive");
+    const tech = data.technology[index];
+    techDescription.textContent = tech.description;
+    techName.textContent = tech.name;
+    techImage.setAttribute("src", tech.images.portrait);
+  });
+});
 
 // Main Navigation
 const mainNav = document.querySelectorAll("header>nav>ul>li");

@@ -297,9 +297,10 @@ body {
   align-items: center;
   justify-content: space-around;
   background: transparent;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
-.circle:hover {
+.circle:hover,
+.circleactive {
   background: #ffffff;
   color: #000000;
 }
