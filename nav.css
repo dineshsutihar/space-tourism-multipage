@@ -59,7 +59,7 @@ nav ul li a:hover {
   overflow: visible;
 }
 
-nav ul li a span {
+#desktop-responsive ul li a span {
   color: #ffffff;
   font-weight: 700;
 }
@@ -71,6 +71,10 @@ header > hr {
   background-color: rgba(255, 255, 255, 0.361);
   border: none;
   position: absolute;
+}
+
+#hamburger {
+  display: none;
 }
 
 /* Destination  */
@@ -96,19 +100,62 @@ header > hr {
   justify-content: center;
 }
 
-
-/* Navbar for smaller devices */
-
-/* Media Query for Mobile Devices */
-@media only screen and (max-width: 767px) {
-  header{
-    display: none;
-  }
+#mobile-responsive {
+  display: none;
 }
 
-/* Media Query for Tablet Devices */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  header{
-    display: none;
+#menuToggle {
+  display: none;
+}
+
+#menu-open {
+  display: none;
+}
+/* Nav bar for smaller devices */
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 1023px) {
+  header {
+    position: absolute;
+    z-index: 100;
+    border: 1px solid red;
+    img {
+      margin-left: 1.5rem;
+    }
+
+    #desktop-responsive {
+      display: none;
+    }
+
+    hr {
+      display: none;
+    }
+
+    #hamburger {
+      display: block;
+      margin-right: 1.5rem;
+    }
   }
+  #menu-open {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+  }
+
+  /* #menuToggle{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    z-index: 100;
+    right: 20px;
+    width: 250px;
+    height: fit-content;
+    padding: 20px;
+    font-size:1.3rem;
+    background-color: rgba(245, 222, 179, 0.326);
+  } */
 }

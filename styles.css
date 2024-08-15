@@ -389,19 +389,19 @@ body {
     #leftMain {
       width: auto;
       text-align: center;
-      padding: 10px;
+      padding: 20px;
       line-height: 1.7;
       h1 {
         text-transform: uppercase;
-        font-size: 1.3rem;
+        font-size: 1.7rem;
         font-weight: 500;
 
         span {
-          font-size: 6rem;
+          font-size: 7rem;
         }
       }
       p {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         margin-top: 20px;
         font-weight: 100;
       }
