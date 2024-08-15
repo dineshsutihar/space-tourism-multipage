@@ -336,6 +336,11 @@ body {
     align-items: center;
     text-align: center;
 
+    a {
+      width: 200px;
+      height: 200px;
+    }
+
     #leftMain {
       width: 90%;
       text-align: center;
@@ -360,8 +365,9 @@ body {
 }
 
 /* Media Query for Tablet Devices */
-/* @media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   body {
+    height: auto;
     width: 100vw;
     overflow-x: hidden;
     background: url(./assets/home/background-home-mobile.jpg);
@@ -370,9 +376,35 @@ body {
   }
   #home {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+
+    a {
+      width: 300px;
+      height: 300px;
+    }
+
     #leftMain {
-      width: 100%;
+      width: auto;
+      text-align: center;
+      padding: 10px;
+      line-height: 1.7;
+      h1 {
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        font-weight: 500;
+
+        span {
+          font-size: 6rem;
+        }
+      }
+      p {
+        font-size: 1.2rem;
+        margin-top: 20px;
+        font-weight: 100;
+      }
     }
   }
-} */
+}
