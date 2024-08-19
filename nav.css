@@ -108,7 +108,7 @@ header > hr {
   display: none;
 }
 
-#menu-open {
+#menu-open,#menu-close {
   display: none;
 }
 /* Nav bar for smaller devices */
@@ -136,26 +136,45 @@ header > hr {
       margin-right: 1.5rem;
     }
   }
-  #menu-open {
+  #menu-open,#menu-close {
     display: block;
     position: absolute;
-    z-index: 100;
+    z-index: 1020;
     right: 20px;
     width: 30px;
     height: 30px;
   }
+  #menu-close{
+    display: none;
+  }
 
-  /* #menuToggle{
+ #menuToggle{
+  display: block;
+  position: absolute;
+  top: 15px;
+  z-index: 100;
+  right: 0px;
+  width: 200px;
+  height: auto;
+  background-color: #0a0a17;
+  border-radius: 10px;
+  padding: 10px;
+ }
+
+ #menu{
+  padding-top: 40px;
+ }
+ #menu a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
     display: block;
-    position: absolute;
-    right: 0;
-    top: 20px;
-    z-index: 100;
-    right: 20px;
-    width: 250px;
-    height: fit-content;
-    padding: 20px;
-    font-size:1.3rem;
-    background-color: rgba(245, 222, 179, 0.326);
-  } */
+    padding: 10px;
+    border-bottom: 1px solid #ffffff;
+    transition: 0.3s;
+    cursor: pointer;
+    li{
+      list-style: none;
+    }
+ }
 }

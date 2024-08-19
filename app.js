@@ -71,10 +71,21 @@ techNav.forEach((ele, index) => {
 
 // Main Navigation
 const mainNav = document.querySelectorAll("header>nav>ul>li");
-mainNav.forEach((ele, index) => {
+const mobNav = document.querySelectorAll("#menuToggle>ul>li");
+
+// Combine both NodeLists into one array for iteration
+const navItems = [...mainNav, ...mobNav];
+
+navItems.forEach((ele, index) => {
+  console.log("Mobile elem clicked");
+  console.log(ele.innerHTML);
+
   ele.addEventListener("click", () => {
     document.querySelector(".home").classList.remove("navActive");
-    mainNav.forEach((navItem) => navItem.classList.remove("navActive"));
+
+    // Remove navActive from all nav items
+    navItems.forEach((navItem) => navItem.classList.remove("navActive"));
+
     switch (index) {
       case 0:
         document.getElementById("home").style.display = "flex";
